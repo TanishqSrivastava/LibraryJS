@@ -1,6 +1,6 @@
 const myLibrary = [];
 const btn = document.getElementById("submit");
-const two = document.getElementById("two");
+
 function Book(name, author, pages, read) {
   this.name = name;
   this.author = author;
@@ -14,6 +14,12 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 const container = document.getElementById("container");
+const add = document.getElementById("Add");
+add.addEventListener("click", () => {
+    const form = document.getElementById("form");
+    form.style.display = "flex";
+});
+const close = document.getElementById("close");
 btn.addEventListener("click", () => {
     const name = document.getElementById("name").value;
     const author = document.getElementById("author").value;
@@ -25,9 +31,13 @@ btn.addEventListener("click", () => {
     const di = document.createElement("div");
     di.innerHTML = `<h1> ${book.name} </h1> <p> ${author} </p> <p> ${pages} </p> <p> ${read}</p> <button class="delete">Delete</button> <button class="read">Read</button> <button class="notread">Not Read</button>`
     container.appendChild(di);
+    
     }
 );
-
+close.addEventListener("click", () => {
+    const form = document.getElementById("form");
+    form.style.display = "none";
+});
 container.addEventListener("click", (event) => {
     const target = event.target;
     if (target.classList.contains("delete")) {
@@ -45,8 +55,3 @@ container.addEventListener("click", (event) => {
   });
 
 
-two.addEventListener("click", () => {
-    for (let x =0;x<myLibrary.length;x++){
-        console.log(myLibrary[x].info());
-    }
-});
