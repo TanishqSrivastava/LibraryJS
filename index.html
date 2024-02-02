@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <title>Index</title>
+        <style>
+            #container{
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+            }
+            #container div{
+                border:2px solid blue;
+                display:flex;
+                flex-direction:column;
+                align-items:center;
+                justify-content:center;
+                margin:5px;
+                padding:5px;
+                
+            }
+            .header{
+                height:auto;
+                padding:5px;
+                gap:20px;
+                background-color:lightgray;
+                width:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                flex-direction:column;
+                font-size:25px;
+            }
+            #container div button{
+                margin-bottom:10px;
+            }
+            #container div h1{
+                font-size:25px;
+
+            }
+            #container div p{
+                font-size:20px;
+            }
+            button{
+                font-size:25px;padding:5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <SPAN>
+            Name
+            <input type="text" id="name" name="name"></SPAN>
+            <span>
+            Author
+            <input type="text" id="author" name="author"></span>
+            <span>
+            Pages
+            <input type="text" id="pages" name="pages"></span>
+            <span>
+            Read
+            <input type="text" id="read" name="read">
+            </span>
+            <button id="submit"style="font-size:25px;padding:5px;">Submit</button>
+            <button id="two" style="font-size:25px;padding:5px;">Two</button></div>
+        <div id = "container">
+            
+        </div>
+        <script src="test.js"></script>
+    </body>
+</html>
